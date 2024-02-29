@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>agustin</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial;
+      background-color: #fffff;
+      padding: 10px;
+    }
+
+    nav {
+      background-color: #566573;
+      padding: 20px;
+    }
+
+    ul li {
+      display: inline;
+      margin-right: 20px;
+      position: relative;
+    }
+
+    ul li button {
+      color: #424949 ;
+      padding: 10px 30px;
+      border-radius: 10px;
+      font-size: 18px;
+      background-color: #CCD1D1 ;
+      cursor: pointer;
+      position: relative;
+    }
+
+    ul li button:hover,
+    ul li button:active {
+      background-color: #EC7063;
+      border-color: #ffffff;
+    }
+
+    ul li button a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 5px);
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+
+    ul li:hover .submenu {
+      display: block;
+    }
+
+    .submenu li button {
+      width: 100%;
+      border-radius: 0;
+      border: none;
+      border-top: 1px solid #000;
+    }
+
+    .arrow {
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 8px solid #424949;
+      }
+
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><button><a href="#">Home</a></button></li>
+      <li><button><a href="#">Products</a><div class="arrow"></div></button><ul class="submenu">
+      <li><button><a href="#">Product 1</a></button></li>
+      <li><button><a href="#">Product 2</a></button></li>
+    </ul>
+      </li>
+      <li><button><a href="#">About</a></button></li>
+      <li><button><a href="#">Contact</a></button></li>
+    </ul>
+</body>
+</html>
